@@ -16,19 +16,19 @@ int main(int argc, char *argv[])
         printf("Usage: %s <lat> <lon>\n", argv[0]);
         printf("lat is decimal > -90 and <= 90\n");
         printf("lon is decimal > -180 and <= 180\n");
-        exit(0);
+        exit(EXIT_SUCCESS);
     }
 
     dec_lat = atof(argv[1]);
     if (dec_lat <= -90 || dec_lat > 90) {
         printf("latitude must be -90<=lat<90, given %f\n", dec_lat);
-        exit(33); // can't handle north pole, sorry, [A-R]
+        exit(EXIT_FAILURE); // can't handle north pole
     }
 
     dec_lon = atof(argv[2]);
     if (dec_lon <= -180.0 || dec_lon > 180.0) {
         printf("longitude must be -180<=lon<180, given %f\n", dec_lon);
-        exit(32);
+        exit(EXIT_FAILURE);
     }
 
     // longitude
@@ -55,6 +55,6 @@ int main(int argc, char *argv[])
     putchar(a3 + 'a');
     putchar('\n');
 
-    exit(0);
+    exit(EXIT_SUCCESS);
 }
 
