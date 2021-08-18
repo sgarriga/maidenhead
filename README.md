@@ -1,4 +1,4 @@
-![maidenhead]
+#maidenhead
 
 Converts latitude and longitude to Maidenhead grid locators.
 
