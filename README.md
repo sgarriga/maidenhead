@@ -1,4 +1,4 @@
-#maidenhead
+# maidenhead
 
 Converts latitude and longitude to Maidenhead grid locators.
 
@@ -7,7 +7,9 @@ Test were cases lifted from https://gist.github.com/laemmy/maidenhead.py
 
 To build the executable
   - make maidenhead
+
 To install (to /usr/local/bin)
   - make install
+
 To test
   - ./grid_test.sh
